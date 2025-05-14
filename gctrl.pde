@@ -1,7 +1,7 @@
 import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
 import processing.serial.*;
-
+import javax.swing.JFrame;
 Serial port = null;
 
 // select and modify the appropriate line for your operating system
@@ -28,7 +28,8 @@ void openSerialPort()
 
 void selectSerialPort()
 {
-  String result = (String) JOptionPane.showInputDialog(this,
+  JFrame frame = new JFrame();
+  String result = (String) JOptionPane.showInputDialog(frame,
     "Select the serial port that corresponds to your Arduino board.",
     "Select serial port",
     JOptionPane.PLAIN_MESSAGE,
