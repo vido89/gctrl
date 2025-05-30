@@ -3,7 +3,7 @@ import javax.swing.JOptionPane;
 import processing.serial.*;
 import javax.swing.JFrame;
 Serial port = null;
-PImage img;
+// PImage img;
 // select and modify the appropriate line for your operating system
 // leave as null to use interactive port (press 'p' in the program)
 String portname = null;
@@ -45,9 +45,9 @@ void selectSerialPort()
 
 void setup()
 {
-  size(800, 350);
+  size(500, 350);
   openSerialPort();
-  img = loadImage("myImage.png");  // <-- Make sure your image is in the data folder!
+  //img = loadImage("myImage.png");  // <-- Make sure your image is in the data folder!
   openSerialPort();
 }
 
@@ -76,9 +76,9 @@ void draw()
   text("current serial port: " + portname, 18, y); y -= dy;
   
   // Draw the image on the right side
-  int imgX = width - img.width - 20;  // 20 pixels padding from right edge
-  int imgY = 20;                      // 20 pixels from top
-  image(img, imgX, imgY);
+  //int imgX = width - img.width - 20;  // 20 pixels padding from right edge
+  //int imgY = 20;                      // 20 pixels from top
+  //image(img, imgX, imgY);
 }
 
 void keyPressed()
